@@ -1,3 +1,5 @@
+name: zmk-keyboard-tecladitow95
+
 build:
   settings:
     board_root: .

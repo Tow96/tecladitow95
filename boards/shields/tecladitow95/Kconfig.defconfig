@@ -1,0 +1,6 @@
+if SHIELD_TECLADITOW_95
+
+config ZMK_TECLADITOW95
+    default "Tecladitow 95"
+
+endif
