@@ -4,4 +4,20 @@ config ZMK_TECLADITOW95
     bool
     default y
 
+config GPIO_MCP230XX
+    bool
+    default y
+
+config GPIO_MCP23017
+    bool
+    default y
+
+config I2C
+    bool
+    default y
+
+config GPIO
+    bool
+    default y
+
 endif
