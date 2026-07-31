@@ -9,7 +9,7 @@
             bindings = <
                 &kp Z   &kp M   &kp K       &kp P
                 &kp A   &kp B   &kp C       &kp I
-                &kp D   &kp E   &bootloader &KP S
+                &kp D   &kp E   &bootloader &kp S
             >;
         };
     };
