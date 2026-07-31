@@ -8,8 +8,4 @@ config I2C
     bool
     default y
 
-config GPIO_MCP23017
-    bool
-    default y
-
 endif
