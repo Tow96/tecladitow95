@@ -48,13 +48,12 @@
 
     mcp23017: mcp23017@20 {
         compatible = "microchip,mcp230xx";
-        status = "okay";
-        gpio-controller;
-        wakeup-source;
         reg = <0x20>;
-        #gpio-cells = <2>;
+
         ngpios = <16>;
-        // int-gpios = <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+
+        gpio-controller;
+        #gpio-cells = <2>;
         label = "MCP23017";
     };
 };
