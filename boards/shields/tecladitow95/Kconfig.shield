@@ -1,2 +1,10 @@
 config SHIELD_TECLADITOW95
     def_bool $(shields_list_contains,tecladitow95)
+
+config ZMK_KSCAN_MATRIX_POLLING
+    bool
+    default y
+
+config GPIO_MCP230XX
+    bool
+    default y

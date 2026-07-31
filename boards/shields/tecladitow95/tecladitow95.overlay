@@ -1,6 +1,4 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <dt-bindings/gpio/gpio.h>
-#include <dt-bindings/i2c/i2c.h>
 
 / {
     kscan0: kscan0 {
@@ -12,7 +10,7 @@
             = <&pro_micro 21 GPIO_ACTIVE_HIGH>
             , <&pro_micro 20 GPIO_ACTIVE_HIGH>
             , <&pro_micro 19 GPIO_ACTIVE_HIGH>
-            , <&expander0 0 GPIO_ACTIVE_HIGH>
+            , <&mcp23017 0 GPIO_ACTIVE_HIGH>
             ;
 
         row-gpios
@@ -47,18 +45,16 @@
 
 &i2c0 {
     status = "okay";
-    clock-frequency = <I2C_BITRATE_FAST>;
 
-    pinctrl-0 = <&i2c0_default>;
-    pinctrl-1 = <&i2c0_sleep>;
-    pinctrl-names = "default", "sleep";
-
-    expander0: mcp23017@20 {
+    mcp23017: mcp23017@20 {
         compatible = "microchip,mcp230xx";
-        status="okay";
+        status = "okay";
         gpio-controller;
+        wakeup-source;
         reg = <0x20>;
         #gpio-cells = <2>;
-        ngpios=<16>;
+        ngpios = <16>;
+        // int-gpios = <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        label = "MCP23017";
     };
 };
