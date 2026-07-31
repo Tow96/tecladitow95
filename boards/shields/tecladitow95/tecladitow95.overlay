@@ -17,7 +17,7 @@
             gpio-controller;
             reg = <0x20>;
             ngpios=<16>;
-        }
+        };
     };
 
     kscan0: kscan0 {
