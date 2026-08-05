@@ -2,6 +2,8 @@
 #
 # ZMK Firmware Local Build Script
 #
+# Shamelessly taken from: https://github.com/carlosedp/zmk-sofle
+#
 # This script automates building ZMK keyboard firmware locally using containerized
 # build environments (Podman/Docker). It dynamically reads build configurations from
 # build.yaml and manages west dependencies from config/west.yml.
@@ -25,7 +27,7 @@
 set -euo pipefail
 
 # Configuration
-RUNTIME="${RUNTIME:-podman}" # Could be docker or podman
+RUNTIME="${RUNTIME:-docker}" # Could be docker or podman
 IMG="${ZMK_IMAGE:-docker.io/zmkfirmware/zmk-build-arm:4.1-branch}"
 ENV="-e CMAKE_PREFIX_PATH=/zmk/zephyr:${CMAKE_PREFIX_PATH:-}"
 COMMAND="$RUNTIME run --rm --workdir /zmk -v $(pwd):/zmk -v /tmp:/temp $ENV $IMG"
