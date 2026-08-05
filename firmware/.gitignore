@@ -1,0 +1,9 @@
+build/*
+tmp/*
+
+zmk-tecladitow95/.west/*
+zmk-tecladitow95/build/*
+zmk-tecladitow95/zmk/*
+zmk-tecladitow95/zephyr/*
+!zmk-tecladitow95/zephyr/module.yml
+zmk-tecladitow95/modules/*
