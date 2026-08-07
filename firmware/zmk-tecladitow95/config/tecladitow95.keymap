@@ -1,5 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     keymap {
@@ -8,7 +9,7 @@
         default_layer {
             bindings = <
                 &kp Z   &kp M   &kp K
-                &kp A   &kp B   &kp C
+                &kp A   &kp B   &rgb_ug RGB_COLOR_HSB(61,100,50)
                 &kp D   &kp E   &bootloader
             >;
         };
