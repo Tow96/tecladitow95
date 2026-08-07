@@ -4,8 +4,4 @@ config ZMK_TECLADITOW95
     bool
     default y
 
-config I2C
-    bool
-    default y
-
 endif

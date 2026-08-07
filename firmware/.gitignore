@@ -7,3 +7,4 @@ zmk-tecladitow95/zmk/*
 zmk-tecladitow95/zephyr/*
 !zmk-tecladitow95/zephyr/module.yml
 zmk-tecladitow95/modules/*
+zmk-tecladitow95/zmk/*
